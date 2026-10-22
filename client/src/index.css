@@ -1,0 +1,521 @@
+/* ========================================
+   THE SNEAKER CO. — HOMEPAGE
+======================================== */
+
+body {
+  margin: 0;
+  color: #171717;
+  background: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  text-decoration: none !important;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn,
+.btn-outline {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid #171717;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.btn {
+  background: #171717;
+  color: #fff;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: #444;
+  background: #444;
+}
+
+.btn-outline {
+  background: #fff;
+  color: #171717;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: #f5f5f5;
+}
+
+.btn:disabled,
+.btn-outline:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  background: #fff;
+  font: inherit;
+}
+
+.input:focus-visible {
+  border-color: #171717;
+  outline: 2px solid #171717;
+  outline-offset: 1px;
+}
+
+.card {
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  background: #fff;
+  padding: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  color: #525252;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sc-accountnav-0210,
+.sc-accountnav-0211 {
+  border: 0;
+  background-color: transparent;
+  color: #171717;
+  text-decoration: none;
+}
+
+.sc-accountnav-0210 {
+  transition: background-color 180ms ease;
+}
+
+.sc-accountnav-0210:not(.sc-accountnav-0211):hover {
+  background-color: #f5f5f5;
+}
+
+.sc-accountnav > h1 {
+  margin: 0 0 20px;
+  color: #171717;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.sc-home-0319 {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px 64px;
+  color: #111;
+  box-sizing: border-box;
+}
+
+.sc-home-0319 *,
+.sc-home-0319 *::before,
+.sc-home-0319 *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.sc-home-0320 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 360px;
+  padding: 72px 0 64px;
+}
+
+.sc-home-0321 {
+  max-width: 760px;
+  margin: 0;
+  color: #111;
+  font-size: clamp(38px, 6vw, 76px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+}
+
+.sc-home-0322 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* Use the site's existing button styles.
+   These rules only provide safe sizing. */
+
+.sc-home-0322 .btn,
+.sc-home-0322 .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 18px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* ========================================
+   FEATURED PRODUCTS
+======================================== */
+
+.sc-home-featured {
+  width: 100%;
+  margin: 24px 0 64px;
+}
+
+.sc-home-0323 {
+  margin: 0 0 22px;
+  color: #111;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sc-home-0324 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  align-items: start;
+}
+
+/* ========================================
+   SHOP BY GENDER
+======================================== */
+
+.sc-home-gender {
+  width: 100%;
+  margin: 64px 0;
+}
+
+.sc-home-0325 {
+  margin: 0 0 22px;
+  color: #111;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sc-home-0326 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.sc-home-0327 {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 19;
+  overflow: hidden;
+  isolation: isolate;
+  background: #dedede;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sc-home-gender-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 450ms ease;
+}
+
+/* Temporary fallbacks until the real image paths are connected. */
+
+.sc-home-card-men .sc-home-gender-image {
+  background-color: #383838;
+  background-image: linear-gradient(
+    145deg,
+    #292929,
+    #777,
+    #424242
+  );
+}
+
+.sc-home-card-women .sc-home-gender-image {
+  background-color: #ded8d6;
+  background-image: linear-gradient(
+    145deg,
+    #e3dfdd,
+    #aaa09e,
+    #6d6868
+  );
+}
+
+.sc-home-0327:hover .sc-home-gender-image {
+  transform: scale(1.035);
+}
+
+.sc-home-gender-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.56),
+    rgba(0, 0, 0, 0.12) 35%,
+    transparent 65%
+  );
+}
+
+.sc-home-gender-content {
+  position: absolute;
+  z-index: 2;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sc-home-0328 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(28px, 3.4vw, 46px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.sc-home-0327:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* ========================================
+   NEWSLETTER
+======================================== */
+
+.sc-home-0329 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 72px 0 0;
+  padding: 48px 0 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.sc-home-0330 {
+  max-width: 700px;
+  margin: 0 0 24px;
+  color: #111;
+  font-size: clamp(25px, 3.5vw, 42px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+
+.sc-home-0331 {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.sc-home-0331 .input {
+  flex: 1;
+  min-width: 0;
+  min-height: 42px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.sc-home-0331 .btn {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 10px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.sc-home-0332 {
+  margin: 14px 0 0;
+  color: #287647;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   RESPONSIVE — TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+  .sc-home-0319 {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .sc-home-0320 {
+    min-height: 320px;
+    padding: 60px 0 48px;
+  }
+
+  .sc-home-0321 {
+    letter-spacing: -1.5px;
+  }
+
+  .sc-home-0324 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .sc-home-0326 {
+    gap: 16px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE — MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+  .sc-home-0319 {
+    padding: 0 16px 40px;
+  }
+
+  .sc-home-0320 {
+    min-height: 280px;
+    padding: 44px 0;
+  }
+
+  .sc-home-0321 {
+    font-size: clamp(36px, 10vw, 54px);
+    letter-spacing: -1.5px;
+  }
+
+  .sc-home-0322 {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .sc-home-0322 .btn,
+  .sc-home-0322 .btn-outline {
+    min-height: 40px;
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .sc-home-featured {
+    margin: 24px 0 44px;
+  }
+
+  .sc-home-0323 {
+    margin-bottom: 16px;
+    font-size: 23px;
+  }
+
+  .sc-home-0324 {
+    gap: 12px;
+  }
+
+  .sc-home-gender {
+    margin: 42px 0;
+  }
+
+  .sc-home-0325 {
+    margin-bottom: 16px;
+    font-size: 23px;
+  }
+
+  .sc-home-0326 {
+    gap: 12px;
+  }
+
+  .sc-home-gender-content {
+    right: 12px;
+    bottom: 14px;
+    left: 12px;
+  }
+
+  .sc-home-0328 {
+    font-size: clamp(18px, 4.8vw, 29px);
+    letter-spacing: 0.5px;
+  }
+
+  .sc-home-0329 {
+    margin-top: 48px;
+    padding-top: 32px;
+  }
+
+  .sc-home-0330 {
+    margin-bottom: 20px;
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .sc-home-0331 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sc-home-0331 .input,
+  .sc-home-0331 .btn {
+    width: 100%;
+    min-height: 42px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-home-gender-image {
+    transition: none;
+  }
+}

@@ -1,0 +1,571 @@
+
+/* ========================================
+   THE SNEAKER CO. — HOMEPAGE
+   Premium, minimal, editorial layout
+======================================== */
+
+.sc-home {
+  --home-ink: #111;
+  --home-muted: #707070;
+  --home-line: #e6e6e6;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 28px 64px;
+  color: var(--home-ink);
+  background: #fff;
+}
+
+.sc-home *,
+.sc-home *::before,
+.sc-home *::after {
+  box-sizing: border-box;
+}
+
+.sc-home a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========================================
+   SHARED TYPOGRAPHY
+======================================== */
+
+.sc-home-eyebrow {
+  margin: 0 0 15px;
+  color: var(--home-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.sc-home-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.sc-home-section-heading h2 {
+  margin: 0;
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 700;
+  letter-spacing: -1.3px;
+  line-height: 1.1;
+}
+
+.sc-home-text-link {
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--home-ink);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 180ms ease;
+}
+
+.sc-home-text-link:hover {
+  opacity: 0.6;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.sc-home-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 17px;
+  border: 1px solid #111;
+  border-radius: 2px;
+  background: #111;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.sc-home-button:hover {
+  border-color: #333;
+  background: #333;
+}
+
+.sc-home-button-light {
+  border-color: #fff;
+  background: #fff;
+  color: #111 !important;
+}
+
+.sc-home-button-light:hover {
+  border-color: #d8d8d8;
+  background: #d8d8d8;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.sc-home-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background: transparent;
+}
+
+.sc-home-hero-copy {
+  position: absolute;
+  inset: auto auto 1% 6%;
+  z-index: 2;
+  display: flex;
+  width: min(68%, 760px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(10px, 1.5vw, 18px);
+  color: #fffaf6;
+  pointer-events: none;
+}
+
+.sc-home-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  color: #f3e0d7;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.sc-home-hero-kicker span {
+  width: 24px;
+  height: 1px;
+  background: #e4a37f;
+}
+
+.sc-home-hero h1 {
+  margin: 0;
+  color: #fffaf6;
+  font-size: clamp(24px, 7.2vw, 88px);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 1;
+  white-space: nowrap;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+}
+
+.sc-home-hero-description {
+  transform: translateY(-8px);
+  margin: 0;
+  color: rgba(255, 250, 246, 0.9);
+  font-size: clamp(12px, 1.25vw, 15px);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
+}
+
+.sc-home-hero-actions {
+  transform: translateY(-8px);
+  display: flex;
+  flex-wrap: wrap;
+  pointer-events: auto;
+}
+
+.sc-home-hero-actions .sc-home-button {
+  min-height: 48px;
+  padding: 0 20px;
+  border-color: #fff;
+  border-radius: 3px;
+  background: #fff;
+  color: #171717 !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.22);
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  pointer-events: auto;
+}
+
+.sc-home-hero-actions .sc-home-button:hover {
+  border-color: #e8e8e8;
+  background: #e8e8e8;
+}
+
+.sc-home-hero-art {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.sc-home-hero-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: none;
+}
+
+/* ========================================
+   SHOP BY CATEGORY
+======================================== */
+
+.sc-home-gender {
+  width: 100%;
+  margin: 68px 0 76px;
+}
+
+.sc-home-gender-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.sc-home-gender-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 19;
+  overflow: hidden;
+  isolation: isolate;
+  background: #e9e9e9;
+  color: #fff !important;
+}
+
+.sc-home-gender-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 500ms cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.sc-home-gender-card:hover .sc-home-gender-image {
+  transform: scale(1.035);
+}
+
+.sc-home-gender-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.23) 27%,
+    rgba(0, 0, 0, 0) 60%
+  );
+}
+
+.sc-home-gender-content {
+  position: absolute;
+  right: 26px;
+  bottom: 25px;
+  left: 26px;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.sc-home-gender-content p {
+  margin: 0 0 9px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.sc-home-gender-content h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(36px, 6vw, 76px);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+}
+
+/* ========================================
+   FEATURED PRODUCTS
+======================================== */
+
+.sc-home-featured {
+  width: 100%;
+  margin: 0 0 78px;
+}
+
+.sc-home-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.sc-home-product-grid > * {
+  min-width: 0;
+}
+
+.sc-home-empty {
+  display: flex;
+  min-height: 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 18px;
+  padding: 24px;
+  background: #f6f6f6;
+}
+
+.sc-home-empty p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* ========================================
+   BRAND STATEMENT
+======================================== */
+
+.sc-home-statement {
+  display: flex;
+  min-height: 330px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 70px;
+  padding: 55px 24px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.sc-home-statement .sc-home-eyebrow {
+  color: #bcbcbc;
+}
+
+.sc-home-statement h2 {
+  margin: 5px 0 27px;
+  font-size: clamp(42px, 7vw, 82px);
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  line-height: 0.96;
+}
+
+.sc-home-statement h2 span {
+  color: #bcbcbc;
+}
+
+/* ========================================
+   FOCUS ACCESSIBILITY
+======================================== */
+
+.sc-home a:focus-visible,
+.sc-home button:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 4px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .sc-home {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .sc-home-hero {
+    padding: 0;
+  }
+
+  .sc-home-gender {
+    margin: 55px 0 62px;
+  }
+
+  .sc-home-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 14px;
+    row-gap: 24px;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .sc-home {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .sc-home {
+    padding-top: 0;
+    padding-bottom: 42px;
+  }
+
+  .sc-home-hero {
+    padding: 0;
+  }
+
+  .sc-home-hero-copy {
+    width: min(78%, 440px);
+    gap: 10px;
+  }
+
+  .sc-home-hero-kicker {
+    gap: 6px;
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+
+  .sc-home-hero-kicker span {
+    width: 16px;
+  }
+
+  .sc-home-hero h1 {
+    font-size: clamp(24px, 7.2vw, 56px);
+  }
+
+  .sc-home-hero-description {
+    font-size: 11px;
+  }
+
+  .sc-home-hero-actions .sc-home-button {
+    min-height: 38px;
+    padding: 0 13px;
+    font-size: 11px;
+  }
+
+  .sc-home-section-heading {
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .sc-home-section-heading h2 {
+    font-size: 25px;
+    letter-spacing: -0.9px;
+  }
+
+  .sc-home-section-heading .sc-home-eyebrow {
+    margin-bottom: 9px;
+    font-size: 9px;
+  }
+
+  .sc-home-text-link {
+    font-size: 11px;
+  }
+
+  .sc-home-gender {
+    margin: 42px 0 50px;
+  }
+
+  .sc-home-gender-grid {
+    gap: 10px;
+  }
+
+  .sc-home-gender-card {
+    aspect-ratio: 16 / 19;
+  }
+
+  .sc-home-gender-content {
+    right: 10px;
+    bottom: 13px;
+    left: 10px;
+    gap: 5px;
+  }
+
+  .sc-home-gender-content p {
+    margin-bottom: 6px;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .sc-home-gender-content h3 {
+    font-size: clamp(22px, 6.2vw, 36px);
+    letter-spacing: -1.5px;
+  }
+
+  .sc-home-featured {
+    margin-bottom: 48px;
+  }
+
+  .sc-home-product-grid {
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+
+  .sc-home-statement {
+    min-height: 260px;
+    margin-bottom: 48px;
+    padding: 40px 15px;
+  }
+
+  .sc-home-statement h2 {
+    font-size: clamp(42px, 11vw, 64px);
+  }
+
+}
+
+@media (max-width: 520px) {
+  .sc-home {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+  .sc-home {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .sc-home-gender-content h3 {
+    font-size: 21px;
+  }
+
+  .sc-home-gender-content p {
+    font-size: 8px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-home *,
+  .sc-home *::before,
+  .sc-home *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
