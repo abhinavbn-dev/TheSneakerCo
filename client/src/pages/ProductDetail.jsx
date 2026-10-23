@@ -1,3 +1,4 @@
+
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import ProductCard from "../components/ProductCard.jsx";
@@ -5,6 +6,29 @@ import useProducts from "../hooks/useProducts.js";
 import { useCart } from "../context/CartContext.jsx";
 import { money } from "../utils.js";
 import "./ProductDetail.css";
+
+const API_ORIGIN = (
+  import.meta.env.VITE_API_URL || "/api"
+).replace(/\/api\/?$/, "");
+
+function getImageUrl(image) {
+  if (!image) return "";
+
+  if (/^https?:\/\//i.test(image)) return image;
+
+  if (
+    image.startsWith("data:") ||
+    image.startsWith("blob:")
+  ) {
+    return image;
+  }
+
+  if (image.startsWith("/uploads/")) {
+    return `${API_ORIGIN}${image}`;
+  }
+
+  return image;
+}
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -43,7 +67,13 @@ export default function ProductDetail() {
       ...(product.image ? [product.image] : []),
     ];
 
-    return [...new Set(productImages.filter(Boolean))];
+    return [
+      ...new Set(
+        productImages
+          .filter(Boolean)
+          .map(getImageUrl)
+      ),
+    ];
   }, [product]);
 
   const sizes = useMemo(() => {
