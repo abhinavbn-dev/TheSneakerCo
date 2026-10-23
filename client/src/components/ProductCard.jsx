@@ -4,18 +4,42 @@ import { money } from "../utils.js";
 import { useCart } from "../context/CartContext.jsx";
 import "./ProductCard.css";
 
+const API_ORIGIN = (
+  import.meta.env.VITE_API_URL || "/api"
+).replace(/\/api\/?$/, "");
+
+function getImageUrl(image) {
+  if (!image) return "";
+
+  if (
+    image.startsWith("http://") ||
+    image.startsWith("https://") ||
+    image.startsWith("data:") ||
+    image.startsWith("blob:")
+  ) {
+    return image;
+  }
+
+  if (image.startsWith("/uploads/")) {
+    return `${API_ORIGIN}${image}`;
+  }
+
+  return image;
+}
+
 export function ProductImage({
   product,
   className = "product-card-image",
   imageIndex = 0,
 }) {
   const image = product?.images?.[imageIndex];
+  const imageUrl = getImageUrl(image);
 
   return (
     <div className={`${className} product-card-image-frame`}>
-      {image ? (
+      {imageUrl ? (
         <img
-          src={image}
+          src={imageUrl}
           alt={product.name || "Sneaker"}
           loading="lazy"
         />
@@ -92,10 +116,7 @@ export default function ProductCard({ product }) {
       <div className="product-card-details">
         <p className="product-card-brand">{product.brand}</p>
 
-        <Link
-          to={`/product/${id}`}
-          className="product-card-name"
-        >
+        <Link to={`/product/${id}`} className="product-card-name">
           {product.name}
         </Link>
 
